@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await fetch("https://book-review-backend-vl1h.onrender.com");
+        const res = await fetch("https://book-review-backend-vl1h.onrender.com/reviews");
         const data = await res.json();
         setAllReviews(data);
       } catch (err) {
