@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await fetch("http://localhost:5001/reviews");
+        const res = await fetch("https://book-review-backend-vl1h.onrender.com");
         const data = await res.json();
         setAllReviews(data);
       } catch (err) {
@@ -34,7 +34,7 @@ function App() {
 
 
   const handleLogin = async () => {
-    const res = await fetch("http://localhost:5001/login", {
+    const res = await fetch("https://book-review-backend-vl1h.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -53,7 +53,7 @@ function App() {
   };
 
   const handleSignup = async () => {
-    const res = await fetch("http://localhost:5001/signup", {
+    const res = await fetch("https://book-review-backend-vl1h.onrender.com/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -97,7 +97,7 @@ function App() {
     }
   
     try {
-      const res = await fetch("http://localhost:5001/review", {
+      const res = await fetch("https://book-review-backend-vl1h.onrender.com/review", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: currentUser, content: review }),
